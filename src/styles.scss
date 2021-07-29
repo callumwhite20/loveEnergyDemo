@@ -1,1 +1,97 @@
 /* You can add global styles to this file, and also import other style files */
+// Variables
+@import './assets/variables.scss';
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+    font-family: 'helvetica', Roboto, "Helvetica Neue", sans-serif;;
+    color: $base-font;
+}
+
+.blue-font {
+    color: $blue-font;
+}
+
+.green-font {
+    color: $green-font;
+}
+
+.white-font {
+    color: $white;
+}
+
+.icon-button {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.form-field {
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    box-sizing: border-box;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+.alert {
+    font-size: 12px;
+    line-height: 12px;
+    height: 12px;
+
+    &.alert-danger div {
+        color: $red;
+    }
+}
+
+.hide {
+    opacity: 0;
+}
+
+.hide-on-mobile {
+    display: none;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+@media (min-width: 900px) {
+    .hide-on-mobile {
+        display: initial;
+    }
+}
+
+.button {
+    height: 40px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    background: $blue-black;
+    color: $white;
+    width: 100%;
+    display: block;
+
+    mat-icon {
+        color: $white;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.submit-button {
+    text-transform: uppercase;
+    background: $red;
+}
+
+.raised-button {
+    box-shadow: 0px 1px 3px $base-font;
+}

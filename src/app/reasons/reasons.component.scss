@@ -1,0 +1,69 @@
+@import './../../assets/variables.scss';
+
+.reasons {
+    padding: 24px;
+    position: relative;
+
+    h3 {
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .arrow-button {
+        position: absolute;
+        top: 194px;
+        height: 48px;
+        width: 48px;
+
+        mat-icon {
+            font-size: 48px;
+            width: 48px;
+        }
+    }
+}
+
+.reason {
+    background: $off-white;
+    width: 80%;
+    height: 232px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 24px;
+    box-sizing: border-box;
+    display: none;
+
+    img {
+        display: block;
+        width: 30%;
+        margin: 0 auto 24px;
+    }
+
+    &.selected {
+        display: block;
+    }
+}
+
+.left-arrow {
+    left: 3px;
+}
+
+.right-arrow {
+    right: 3px;
+}
+
+@media (min-width: 900px) {
+    .arrow-button {
+        display: none;
+    }
+
+    .reasons {
+        padding: 24px 10%;
+    }
+
+    .reason {
+        display: block;
+        width: 23%;
+        margin: 0 1%;
+        float: left;
+    }
+}

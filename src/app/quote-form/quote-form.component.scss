@@ -1,0 +1,35 @@
+@import './../../assets/variables.scss';
+
+.quote-form {
+    background: $blue-black;
+    padding: 24px;
+
+    h3 {
+        text-align: center;
+        margin: 0 0 12px;
+    }
+
+    .submit-button {
+        margin-top: 24px;
+        margin-bottom: 6px;
+    }
+
+    sub {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 900px) {
+    .quote-form {
+        width: 300px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 10%;
+        box-sizing: border-box;
+
+        h3 {
+            text-align: left;
+        }
+    }
+}

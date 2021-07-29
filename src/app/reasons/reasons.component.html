@@ -1,0 +1,37 @@
+<div class="reasons">
+    <h3 class="blue-font">Here's some reasons why you should switch your water supply</h3>
+
+    <button class="icon-button arrow-button left-arrow" (click)="prev()">
+        <mat-icon>chevron_left</mat-icon>
+    </button>
+
+    <button class="icon-button arrow-button right-arrow" (click)="next()">
+        <mat-icon>chevron_right</mat-icon>
+    </button>
+
+    <div class="reason" [ngClass]="{'selected': index === 1}">
+        <img src="./../../assets/images/reasons-to-switch-icons/low-prices-icon.svg">
+        <strong>Low Prices:</strong>
+        <p>No hidden extras, no additional costs - just cheaper water rates</p>
+    </div>
+
+    <div class="reason" [ngClass]="{'selected': index === 2}">
+        <img src="./../../assets/images/reasons-to-switch-icons/free-water-audits-icon.svg">
+        <strong>Free water audits:</strong>
+        <p>If you spend over &pound;1,000 on your annual water bill</p>
+    </div>
+
+    <div class="reason" [ngClass]="{'selected': index === 3}">
+        <img src="./../../assets/images/reasons-to-switch-icons/fixed-rates-icon.svg">
+        <strong>Fixed rates:</strong>
+        <p>You can fix your retail rates for up to 3 years</p>
+    </div>
+
+    <div class="reason" [ngClass]="{'selected': index === 4}">
+        <img src="./../../assets/images/reasons-to-switch-icons/easy-setup-icon.svg">
+        <strong>Easy set up:</strong>
+        <p>Once we’ve found the best deal, set up only takes a few minutes</p>
+    </div>
+
+    <div class="clear-fix"></div>
+</div>

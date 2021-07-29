@@ -1,0 +1,61 @@
+.page-header {
+    padding: 6px 0;
+
+    .phone,
+    .phone-number {
+        float: right;
+    }
+
+    .phone-number {
+        display: none;
+        margin-right: 10%;
+        margin-left: 6px;
+    }
+    
+    .icon-button {
+        height: 50px;
+        width: 50px;
+        vertical-align: top;
+    }
+
+    .menu {
+        margin-right: 12px;
+    }
+
+    .link-wrapper {
+        display: none;
+        float: right;
+        height: 50px;
+        padding: 18px 6px;
+        box-sizing: border-box;
+        
+        a {
+            font-size: 12px;
+        }
+    }
+
+    .header-link {
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 900px) {
+    .page-header {
+        .phone,
+        .menu {
+            display: none;
+        }
+
+        .phone-number {
+            display: block;
+        }
+
+        .logo {
+            margin-left: 10%;
+        }
+
+        .link-wrapper {
+            display: block;
+        }
+    }
+}

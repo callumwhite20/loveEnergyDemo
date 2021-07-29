@@ -1,0 +1,45 @@
+<div class="quote-form">
+    <div class="form-contents">
+        <h3 class="white-font">Request a quote</h3>
+
+        <form [formGroup]="quoteForm" (ngSubmit)="onSubmit()">
+            <input class="form-field" placeholder="Name*" type="text" formControlName="name" id="name">
+            <div [ngClass]="{hide: !submitted && !(name?.invalid && (name?.dirty || name?.touched))}"
+                    class="alert alert-danger">
+
+                <div *ngIf="name?.errors?.required">
+                    Name is required.
+                </div>
+            </div>
+
+            <input class="form-field" placeholder="Phone Number*" type="text" formControlName="phoneNumber" id="number">
+            <div [ngClass]="{hide: !submitted && !(phoneNumber?.invalid && (phoneNumber?.dirty || phoneNumber?.touched))}"
+                    class="alert alert-danger">
+
+                <div *ngIf="phoneNumber?.errors?.required">
+                    Phone number is required.
+                </div>
+                <div *ngIf="phoneNumber?.errors?.minlength || phoneNumber?.errors?.maxlength">
+                    Invalid phone number.
+                </div>
+            </div>
+
+            <input class="form-field" placeholder="Email Address*" type="email" formControlName="emailAddress" id="email">
+            <div [ngClass]="{hide: !submitted && !(emailAddress?.invalid && (emailAddress?.dirty || emailAddress?.touched))}"
+                    class="alert alert-danger">
+
+                <div *ngIf="emailAddress?.errors?.required">
+                    Email address is required.
+                </div>
+                <div *ngIf="emailAddress?.errors?.email">
+                    Invalid email address.
+                </div>
+            </div>
+
+
+            <button type="submit" class="button submit-button">Submit</button>
+        </form>
+
+        <sub class="white-font">By submitting your details, you are agreeing to Love Energy Savings <a class="white-font" href="#">terms & conditions</a>. For more information please visit our <a class="white-font" href="#">privacy policy</a>.</sub>
+    </div>
+</div>
